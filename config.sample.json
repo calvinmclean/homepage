@@ -37,6 +37,11 @@
 			"alt" : "Plex",
 			"icon" : "film",
 			"link" : "{{cur}}:32400/web/"
-		}
+		},
+    {
+      "alt" : "Add item",
+      "icon" : "gears",
+      "link" : "{{cur}}/add_item.html"
+    }
 	]
 }
