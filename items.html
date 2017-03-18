@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title><?= $config['title']; ?>: Add Item</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="hp_assets/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="hp_assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="hp_assets/css/main.css" />
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  </head>
+
+  <body>
+      <div class="container">
+        <ul class="nav nav-pills">
+          <li role="presentation"><a href=".">Home</a></li>
+          <li role="presentation"><a href="edit_config.html">Config</a></li>
+          <li role="presentation" class="active"><a href="items.html">Items</a></li>
+        </ul>
+      </div>
+
+    <form class="form-inline" id="item_form" action="hp_assets/lib/edit_items.php">
+      <h3 class="text-center">Add Item</h3>
+
+      <div class="form-group">
+        <label for="alt">Alt text</label>
+        <input type="text" class="form-control" name="alt" placeholder="Alt text" required>
+      </div>
+
+      <div class="form-group">
+        <label for="icon">Font Awesome icon</label>
+        <input type="text" class="form-control" list="icon_list" name="icon" placeholder="Icon name" required>
+        <datalist id="icon_list">
+          <option></option>
+          <option value="address-book">address-book</option>
+          <option value="address-book-o">address-book-o</option>
+          <option value="address-card">address-card</option>
+          <option value="address-card-o">address-card-o</option>
+          <option value="adjust">adjust</option>
+          <option value="american-sign-language-interpreter">american-sign-language-interpreter</option>
+          <option value="anchor">anchor</option>
+          <option value="archive">archive</option>
+          <option value="area-chart">area-chart</option>
+          <option value="arrows">arrows</option>
+          <option value="arrows-h">arrows-h</option>
+          <option value="arrows-v">arrows-v</option>
+          <option value="asl-interpreting">asl-interpreting (alias)</option>
+          <option value="assistive-listening-systems">assistive-listening-systems</option>
+          <option value="asterisk">asterisk</option>
+          <option value="at">at</option>
+          <option value="audio-description">audio-description</option>
+          <option value="automobile">automobile (alias)</option>
+          <option value="balance-scale">balance-scale</option>
+          <option value="ban">ban</option>
+          <option value="bank">bank (alias)</option>
+          <option value="bar-chart">bar-chart</option>
+          <option value="bar-chart-o">bar-chart-o (alias)</option>
+          <option value="barcode">barcode</option>
+          <option value="bars">bars</option>
+          <option value="bath">bath</option>
+          <option value="bathtub">bathtub (alias)</option>
+          <option value="battery-0">battery-0 (alias)</option>
+          <option value="battery-1">battery-1 (alias)</option>
+          <option value="battery-2">battery-2 (alias)</option>
+          <option value="battery-3">battery-3 (alias)</option>
+          <option value="battery-4">battery-4 (alias)</option>
+          <option value="battery-empty">battery-empty</option>
+          <option value="battery-full">battery-full</option>
+          <option value="battery-half">battery-half</option>
+          <option value="battery-quarter">battery-quarter</option>
+          <option value="battery-three-quarters">battery-three-quarters</option>
+          <option value="bed">bed</option>
+          <option value="beer">beer</option>
+          <option value="bell">bell</option>
+          <option value="bell-o">bell-o</option>
+          <option value="bell-slash">bell-slash</option>
+          <option value="bell-slash-o">bell-slash-o</option>
+          <option value="bicycle">bicycle</option>
+          <option value="binoculars">binoculars</option>
+          <option value="birthday-cake">birthday-cake</option>
+          <option value="blind">blind</option>
+          <option value="bluetooth">bluetooth</option>
+          <option value="bluetooth-b">bluetooth-b</option>
+          <option value="bolt">bolt</option>
+          <option value="bomb">bomb</option>
+          <option value="book">book</option>
+          <option value="bookmark">bookmark</option>
+          <option value="bookmark-o">bookmark-o</option>
+          <option value="braille">braille</option>
+          <option value="briefcase">briefcase</option>
+          <option value="bug">bug</option>
+          <option value="building">building</option>
+          <option value="building-o">building-o</option>
+          <option value="bullhorn">bullhorn</option>
+          <option value="bullseye">bullseye</option>
+          <option value="bus">bus</option>
+          <option value="cab">cab (alias)</option>
+          <option value="calculator">calculator</option>
+          <option value="calendar">calendar</option>
+          <option value="calendar-check-o">calendar-check-o</option>
+          <option value="calendar-minus-o">calendar-minus-o</option>
+          <option value="calendar-o">calendar-o</option>
+          <option value="calendar-plus-o">calendar-plus-o</option>
+          <option value="calendar-times-o">calendar-times-o</option>
+          <option value="camera">camera</option>
+          <option value="camera-retro">camera-retro</option>
+          <option value="car">car</option>
+          <option value="caret-square-o-down">caret-square-o-down</option>
+          <option value="caret-square-o-left">caret-square-o-left</option>
+          <option value="caret-square-o-right">caret-square-o-right</option>
+          <option value="caret-square-o-up">caret-square-o-up</option>
+          <option value="cart-arrow-down">cart-arrow-down</option>
+          <option value="cart-plus">cart-plus</option>
+          <option value="cc">cc</option>
+          <option value="certificate">certificate</option>
+          <option value="check">check</option>
+          <option value="check-circle">check-circle</option>
+          <option value="check-circle-o">check-circle-o</option>
+          <option value="check-square">check-square</option>
+          <option value="check-square-o">check-square-o</option>
+          <option value="child">child</option>
+          <option value="circle">circle</option>
+          <option value="circle-o">circle-o</option>
+          <option value="circle-o-notch">circle-o-notch</option>
+          <option value="circle-thin">circle-thin</option>
+          <option value="clock-o">clock-o</option>
+          <option value="clone">clone</option>
+          <option value="close">close (alias)</option>
+          <option value="cloud">cloud</option>
+          <option value="cloud-download">cloud-download</option>
+          <option value="cloud-upload">cloud-upload</option>
+          <option value="code">code</option>
+          <option value="code-fork">code-fork</option>
+          <option value="coffee">coffee</option>
+          <option value="cog">cog</option>
+          <option value="cogs">cogs</option>
+          <option value="comment">comment</option>
+          <option value="comment-o">comment-o</option>
+          <option value="commenting">commenting</option>
+          <option value="commenting-o">commenting-o</option>
+          <option value="comments">comments</option>
+          <option value="comments-o">comments-o</option>
+          <option value="compass">compass</option>
+          <option value="copyright">copyright</option>
+          <option value="creative-commons">creative-commons</option>
+          <option value="credit-card">credit-card</option>
+          <option value="credit-card-alt">credit-card-alt</option>
+          <option value="crop">crop</option>
+          <option value="crosshairs">crosshairs</option>
+          <option value="cube">cube</option>
+          <option value="cubes">cubes</option>
+          <option value="cutlery">cutlery</option>
+          <option value="dashboard">dashboard (alias)</option>
+          <option value="database">database</option>
+          <option value="deaf">deaf</option>
+          <option value="deafness">deafness (alias)</option>
+          <option value="desktop">desktop</option>
+          <option value="diamond">diamond</option>
+          <option value="dot-circle-o">dot-circle-o</option>
+          <option value="download">download</option>
+          <option value="drivers-license">drivers-license (alias)</option>
+          <option value="drivers-license-o">drivers-license-o (alias)</option>
+          <option value="edit">edit (alias)</option>
+          <option value="ellipsis-h">ellipsis-h</option>
+          <option value="ellipsis-v">ellipsis-v</option>
+          <option value="envelope">envelope</option>
+          <option value="envelope-o">envelope-o</option>
+          <option value="envelope-open">envelope-open</option>
+          <option value="envelope-open-o">envelope-open-o</option>
+          <option value="envelope-square">envelope-square</option>
+          <option value="eraser">eraser</option>
+          <option value="exchange">exchange</option>
+          <option value="exclamation">exclamation</option>
+          <option value="exclamation-circle">exclamation-circle</option>
+          <option value="exclamation-triangle">exclamation-triangle</option>
+          <option value="external-link">external-link</option>
+          <option value="external-link-square">external-link-square</option>
+          <option value="eye">eye</option>
+          <option value="eye-slash">eye-slash</option>
+          <option value="eyedropper">eyedropper</option>
+          <option value="fax">fax</option>
+          <option value="feed">feed (alias)</option>
+          <option value="female">female</option>
+          <option value="fighter-jet">fighter-jet</option>
+          <option value="file-archive-o">file-archive-o</option>
+          <option value="file-audio-o">file-audio-o</option>
+          <option value="file-code-o">file-code-o</option>
+          <option value="file-excel-o">file-excel-o</option>
+          <option value="file-image-o">file-image-o</option>
+          <option value="file-movie-o">file-movie-o (alias)</option>
+          <option value="file-pdf-o">file-pdf-o</option>
+          <option value="file-photo-o">file-photo-o (alias)</option>
+          <option value="file-picture-o">file-picture-o (alias)</option>
+          <option value="file-powerpoint-o">file-powerpoint-o</option>
+          <option value="file-sound-o">file-sound-o (alias)</option>
+          <option value="file-video-o">file-video-o</option>
+          <option value="file-word-o">file-word-o</option>
+          <option value="file-zip-o">file-zip-o (alias)</option>
+          <option value="film">film</option>
+          <option value="filter">filter</option>
+          <option value="fire">fire</option>
+          <option value="fire-extinguisher">fire-extinguisher</option>
+          <option value="flag">flag</option>
+          <option value="flag-checkered">flag-checkered</option>
+          <option value="flag-o">flag-o</option>
+          <option value="flash">flash (alias)</option>
+          <option value="flask">flask</option>
+          <option value="folder">folder</option>
+          <option value="folder-o">folder-o</option>
+          <option value="folder-open">folder-open</option>
+          <option value="folder-open-o">folder-open-o</option>
+          <option value="frown-o">frown-o</option>
+          <option value="futbol-o">futbol-o</option>
+          <option value="gamepad">gamepad</option>
+          <option value="gavel">gavel</option>
+          <option value="gear">gear (alias)</option>
+          <option value="gears">gears (alias)</option>
+          <option value="gift">gift</option>
+          <option value="glass">glass</option>
+          <option value="globe">globe</option>
+          <option value="graduation-cap">graduation-cap</option>
+          <option value="group">group (alias)</option>
+          <option value="hand-grab-o">hand-grab-o (alias)</option>
+          <option value="hand-lizard-o">hand-lizard-o</option>
+          <option value="hand-paper-o">hand-paper-o</option>
+          <option value="hand-peace-o">hand-peace-o</option>
+          <option value="hand-pointer-o">hand-pointer-o</option>
+          <option value="hand-rock-o">hand-rock-o</option>
+          <option value="hand-scissors-o">hand-scissors-o</option>
+          <option value="hand-spock-o">hand-spock-o</option>
+          <option value="hand-stop-o">hand-stop-o (alias)</option>
+          <option value="handshake-o">handshake-o</option>
+          <option value="hard-of-hearing">hard-of-hearing (alias)</option>
+          <option value="hashtag">hashtag</option>
+          <option value="hdd-o">hdd-o</option>
+          <option value="headphones">headphones</option>
+          <option value="heart">heart</option>
+          <option value="heart-o">heart-o</option>
+          <option value="heartbeat">heartbeat</option>
+          <option value="history">history</option>
+          <option value="home">home</option>
+          <option value="hotel">hotel (alias)</option>
+          <option value="hourglass">hourglass</option>
+          <option value="hourglass-1">hourglass-1 (alias)</option>
+          <option value="hourglass-2">hourglass-2 (alias)</option>
+          <option value="hourglass-3">hourglass-3 (alias)</option>
+          <option value="hourglass-end">hourglass-end</option>
+          <option value="hourglass-half">hourglass-half</option>
+          <option value="hourglass-o">hourglass-o</option>
+          <option value="hourglass-start">hourglass-start</option>
+          <option value="i-cursor">i-cursor</option>
+          <option value="id-badge">id-badge</option>
+          <option value="id-card">id-card</option>
+          <option value="id-card-o">id-card-o</option>
+          <option value="image">image (alias)</option>
+          <option value="inbox">inbox</option>
+          <option value="industry">industry</option>
+          <option value="info">info</option>
+          <option value="info-circle">info-circle</option>
+          <option value="institution">institution (alias)</option>
+          <option value="key">key</option>
+          <option value="keyboard-o">keyboard-o</option>
+          <option value="language">language</option>
+          <option value="laptop">laptop</option>
+          <option value="leaf">leaf</option>
+          <option value="legal">legal (alias)</option>
+          <option value="lemon-o">lemon-o</option>
+          <option value="level-down">level-down</option>
+          <option value="level-up">level-up</option>
+          <option value="life-buoy">life-buoy (alias)</option>
+          <option value="life-ring">life-ring</option>
+          <option value="life-saver">life-saver (alias)</option>
+          <option value="lightbulb-o">lightbulb-o</option>
+          <option value="line-chart">line-chart</option>
+          <option value="location-arrow">location-arrow</option>
+          <option value="lock">lock</option>
+          <option value="low-vision">low-vision</option>
+          <option value="magic">magic</option>
+          <option value="magnet">magnet</option>
+          <option value="mail-forward">mail-forward (alias)</option>
+          <option value="mail-reply">mail-reply (alias)</option>
+          <option value="mail-reply-all">mail-reply-all (alias)</option>
+          <option value="male">male</option>
+          <option value="map">map</option>
+          <option value="map-marker">map-marker</option>
+          <option value="map-o">map-o</option>
+          <option value="map-pin">map-pin</option>
+          <option value="map-signs">map-signs</option>
+          <option value="meh-o">meh-o</option>
+          <option value="microchip">microchip</option>
+          <option value="microphone">microphone</option>
+          <option value="microphone-slash">microphone-slash</option>
+          <option value="minus">minus</option>
+          <option value="minus-circle">minus-circle</option>
+          <option value="minus-square">minus-square</option>
+          <option value="minus-square-o">minus-square-o</option>
+          <option value="mobile">mobile</option>
+          <option value="mobile-phone">mobile-phone (alias)</option>
+          <option value="money">money</option>
+          <option value="moon-o">moon-o</option>
+          <option value="mortar-board">mortar-board (alias)</option>
+          <option value="motorcycle">motorcycle</option>
+          <option value="mouse-pointer">mouse-pointer</option>
+          <option value="music">music</option>
+          <option value="navicon">navicon (alias)</option>
+          <option value="newspaper-o">newspaper-o</option>
+          <option value="object-group">object-group</option>
+          <option value="object-ungroup">object-ungroup</option>
+          <option value="paint-brush">paint-brush</option>
+          <option value="paper-plane">paper-plane</option>
+          <option value="paper-plane-o">paper-plane-o</option>
+          <option value="paw">paw</option>
+          <option value="pencil">pencil</option>
+          <option value="pencil-square">pencil-square</option>
+          <option value="pencil-square-o">pencil-square-o</option>
+          <option value="percent">percent</option>
+          <option value="phone">phone</option>
+          <option value="phone-square">phone-square</option>
+          <option value="photo">photo (alias)</option>
+          <option value="picture-o">picture-o</option>
+          <option value="pie-chart">pie-chart</option>
+          <option value="plane">plane</option>
+          <option value="plug">plug</option>
+          <option value="plus">plus</option>
+          <option value="plus-circle">plus-circle</option>
+          <option value="plus-square">plus-square</option>
+          <option value="plus-square-o">plus-square-o</option>
+          <option value="podcast">podcast</option>
+          <option value="power-off">power-off</option>
+          <option value="print">print</option>
+          <option value="puzzle-piece">puzzle-piece</option>
+          <option value="qrcode">qrcode</option>
+          <option value="question">question</option>
+          <option value="question-circle">question-circle</option>
+          <option value="question-circle-o">question-circle-o</option>
+          <option value="quote-left">quote-left</option>
+          <option value="quote-right">quote-right</option>
+          <option value="random">random</option>
+          <option value="recycle">recycle</option>
+          <option value="refresh">refresh</option>
+          <option value="registered">registered</option>
+          <option value="remove">remove (alias)</option>
+          <option value="reorder">reorder (alias)</option>
+          <option value="reply">reply</option>
+          <option value="reply-all">reply-all</option>
+          <option value="retweet">retweet</option>
+          <option value="road">road</option>
+          <option value="rocket">rocket</option>
+          <option value="rss">rss</option>
+          <option value="rss-square">rss-square</option>
+          <option value="s15">s15 (alias)</option>
+          <option value="search">search</option>
+          <option value="search-minus">search-minus</option>
+          <option value="search-plus">search-plus</option>
+          <option value="send">send (alias)</option>
+          <option value="send-o">send-o (alias)</option>
+          <option value="server">server</option>
+          <option value="share">share</option>
+          <option value="share-alt">share-alt</option>
+          <option value="share-alt-square">share-alt-square</option>
+          <option value="share-square">share-square</option>
+          <option value="share-square-o">share-square-o</option>
+          <option value="shield">shield</option>
+          <option value="ship">ship</option>
+          <option value="shopping-bag">shopping-bag</option>
+          <option value="shopping-basket">shopping-basket</option>
+          <option value="shopping-card">shopping-cart</option>
+          <option value="shower">shower</option>
+          <option value="sign-in">sign-in</option>
+          <option value="sign-language">sign-language</option>
+          <option value="sign-out">sign-out</option>
+          <option value="signal">signal</option>
+          <option value="signing">signing (alias)</option>
+          <option value="sitemap">sitemap</option>
+          <option value="sliders">sliders</option>
+          <option value="smile-o">smile-o</option>
+          <option value="snowflake-o">snowflake-o</option>
+          <option value="soccer-ball-o">soccer-ball-o (alias)</option>
+          <option value="sort">sort</option>
+          <option value="sort-alpha-asc">sort-alpha-asc</option>
+          <option value="sort-alpha-desc">sort-alpha-desc</option>
+          <option value="sort-amount-asc">sort-amount-asc</option>
+          <option value="sort-amount-desc">sort-amount-desc</option>
+          <option value="sort-asc">sort-asc</option>
+          <option value="sort-desc">sort-desc</option>
+          <option value="sort-down">sort-down (alias)</option>
+          <option value="sort-numeric-asc">sort-numeric-asc</option>
+          <option value="sort-numeric-desc">sort-numeric-desc</option>
+          <option value="sort-up">sort-up (alias)</option>
+          <option value="space-shuttle">space-shuttle</option>
+          <option value="spinner">spinner</option>
+          <option value="spoon">spoon</option>
+          <option value="square">square</option>
+          <option value="square-o">square-o</option>
+          <option value="star">star</option>
+          <option value="star-half">star-half</option>
+          <option value="star-half-empty">star-half-empty (alias)</option>
+          <option value="star-half-full">star-half-full (alias)</option>
+          <option value="star-half-o">star-half-o</option>
+          <option value="star-o">star-o</option>
+          <option value="sticky-note">sticky-note</option>
+          <option value="sticky-note-o">sticky-note-o</option>
+          <option value="street-view">street-view</option>
+          <option value="suitcase">suitcase</option>
+          <option value="sun-o">sun-o</option>
+          <option value="support">support (alias)</option>
+          <option value="tablet">tablet</option>
+          <option value="tachometer">tachometer</option>
+          <option value="tag">tag</option>
+          <option value="tags">tags</option>
+          <option value="tasks">tasks</option>
+          <option value="taxi">taxi</option>
+          <option value="television">television</option>
+          <option value="terminal">terminal</option>
+          <option value="thermometer">thermometer (alias)</option>
+          <option value="thermometer-0">thermometer-0 (alias)</option>
+          <option value="thermometer-1">thermometer-1 (alias)</option>
+          <option value="thermometer-2">thermometer-2 (alias)</option>
+          <option value="thermometer-3">thermometer-3 (alias)</option>
+          <option value="thermometer-4">thermometer-4 (alias)</option>
+          <option value="thermometer-empty">thermometer-empty</option>
+          <option value="thermometer-full">thermometer-full</option>
+          <option value="thermometer-half">thermometer-half</option>
+          <option value="thermometer-quarter">thermometer-quarter</option>
+          <option value="thermometer-three-quarters">thermometer-three-quarters</option>
+          <option value="thumb-tack">thumb-tack</option>
+          <option value="thumbs-down">thumbs-down</option>
+          <option value="thumbs-o-down">thumbs-o-down</option>
+          <option value="thumbs-o-up">thumbs-o-up</option>
+          <option value="thumbs-up">thumbs-up</option>
+          <option value="ticket">ticket</option>
+          <option value="times">times</option>
+          <option value="times-circle">times-circle</option>
+          <option value="times-circle-o">times-circle-o</option>
+          <option value="times-rectangle">times-rectangle (alias)</option>
+          <option value="times-rectangle-o">times-rectangle-o (alias)</option>
+          <option value="tint">tint</option>
+          <option value="toggle-down">toggle-down (alias)</option>
+          <option value="toggle-left">toggle-left (alias)</option>
+          <option value="toggle-off">toggle-off</option>
+          <option value="toggle-on">toggle-on</option>
+          <option value="toggle-right">toggle-right (alias)</option>
+          <option value="toggle-up">toggle-up (alias)</option>
+          <option value="trademark">trademark</option>
+          <option value="trash">trash</option>
+          <option value="trash-o">trash-o</option>
+          <option value="tree">tree</option>
+          <option value="trophy">trophy</option>
+          <option value="truck">truck</option>
+          <option value="tty">tty</option>
+          <option value="tv">tv (alias)</option>
+          <option value="umbrella">umbrella</option>
+          <option value="universal-access">universal-access</option>
+          <option value="university">university</option>
+          <option value="unlock">unlock</option>
+          <option value="unlock-alt">unlock-alt</option>
+          <option value="unsorted">unsorted (alias)</option>
+          <option value="upload">upload</option>
+          <option value="user">user</option>
+          <option value="user-circle">user-circle</option>
+          <option value="user-circle-o">user-circle-o</option>
+          <option value="user-o">user-o</option>
+          <option value="user-plus">user-plus</option>
+          <option value="user-secret">user-secret</option>
+          <option value="user-times">user-times</option>
+          <option value="users">users</option>
+          <option value="vcard">vcard (alias)</option>
+          <option value="vcard-o">vcard-o (alias)</option>
+          <option value="video-camera">video-camera</option>
+          <option value="volume-control-phone">volume-control-phone</option>
+          <option value="volume-down">volume-down</option>
+          <option value="volume-off">volume-off</option>
+          <option value="volume-up">volume-up</option>
+          <option value="warning">warning (alias)</option>
+          <option value="wheelchair">wheelchair</option>
+          <option value="wheelchair-alt">wheelchair-alt</option>
+          <option value="wifi">wifi</option>
+          <option value="window-close">window-close</option>
+          <option value="window-close-o">window-close-o</option>
+          <option value="window-maximize">window-maximize</option>
+        </datalist>
+      </div>
+
+      <div class="form-group">
+        <label for="link">Url for link</label>
+        <input type="url" class="form-control" name="link" placeholder="https://google.com" required>
+      </div>
+
+      <p class="help-block">
+        <a href="http://fontawesome.io/icons/">Find icons</a>
+      </p>
+
+      <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+
+    <h3 class="text-center">Items</h3>
+
+    <table id="items_table" class="table">
+      <thead>
+        <th>#</th>
+        <th>alt</th>
+        <th>icon</th>
+        <th>link</th>
+        <th>action</th>
+      </thead>
+
+      <tbody>
+
+      </tbody>
+    </table>
+
+  </body>
+
+  <script type="text/javascript" src="hp_assets/js/jquery.min.js"></script>
+  <script type="text/javascript">
+
+    function delete_item(alt) {
+      $.post("hp_assets/lib/edit_items.php", "delete=" + alt);
+    }
+
+    $.getJSON("../../config.json", function(data) {
+      data.items.forEach(function(item, index, array) {
+        $("<tr><td>" + index +
+          "</td><td>" + item.alt +
+          "</td><td>" + item.icon +
+          "</td><td>" + item.link +
+          "</td><td>" +
+          "<input type='button' class='btn btn-danger' onclick=\"delete_item('" + item.alt + "');\" value='delete'>" +
+          "</td></tr>").appendTo("#items_table tbody");
+      });
+    });
+
+    $("#item_form").submit(function(event) {
+      event.preventDefault();
+
+      var $item_form = $(this), url = $item_form.attr('action');
+
+      var request = $.post(url, $("#item_form").serialize());
+      request.done(function(data) {
+        location.reload();
+      });
+    });
+
+  </script>
+</html>

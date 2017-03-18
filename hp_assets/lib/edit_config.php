@@ -2,20 +2,6 @@
 
 $config = json_decode(file_get_contents('../../config.json'), true);
 
-if( isset($_POST['alt']) && isset($_POST['icon']) && isset($_POST['link']) ) {
-  $alt = $_POST['alt'];
-  $icon = $_POST['icon'];
-  $link = $_POST['link'];
-
-  $i = 0;
-
-  // Iterate through json to iterate $i
-  foreach ( $config['items'] as $key=>$entry ) $i++;
-  $config['items'][$i]['alt'] = $alt;
-  $config['items'][$i]['icon'] = $icon;
-  $config['items'][$i]['link'] = $link;
-}
-
 if ( isset($_POST['title']) && $_POST['title'] != "" )
   $config['title'] = $_POST['title'];
 

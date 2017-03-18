@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title><?= $config['title']; ?>: Add Item</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="hp_assets/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="hp_assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="hp_assets/css/main.css" />
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  </head>
+
+  <body id="homepage">
+      <div class="container">
+        <ul class="nav nav-pills">
+          <li role="presentation"><a href=".">Home</a></li>
+          <li role="presentation" class="active"><a href="edit_config.html">Config</a></li>
+          <li role="presentation"><a href="items.html">Items</a></li>
+        </ul>
+      </div>
+
+    <form id="config_form" action="hp_assets/lib/edit_config.php">
+
+      <h3 class="text-center">Other Config Options</h3>
+
+      <div class="form-group">
+        <label for="title">Homepage title</label>
+        <input type="text" class="form-control" name="title" placeholder="Homepage title">
+      </div>
+
+      <div class="form-group">
+        <label for="unlock_pattern">Unlock pattern</label>
+        <input type="text" class="form-control" name="unlock_pattern" placeholder="space">
+      </div>
+
+      <div class="form-group">
+        <label for="clock_format">Clock format</label>
+        <input type="text" class="form-control" name="clock_format" placeholder="H:i j/n/Y">
+      </div>
+
+      <div class="form-group">
+        <label for="custom_url">Custom URL</label>
+        <input type="url" class="form-control" name="custom_url" placeholder="">
+      </div>
+
+      <div class="form-group">
+        <label for="custom_url_selector">Custom URL selector</label>
+        <input type="text" class="form-control" name="custom_url_selector" placeholder="">
+      </div>
+
+      <div class="form-group">
+        <label for="custom_url_headers">Custom URL headers</label>
+        <input type="text" class="form-control" name="custom_url_headers" placeholder="">
+      </div>
+
+      <div class="form-group">
+        <label for="unsplash_client_id">Unsplash client ID</label>
+        <input type="text" class="form-control" name="unsplash_client_id" placeholder="">
+      </div>
+
+      <div class="form-group">
+        <label for="idle_timer">Idle timer</label>
+        <input type="text" class="form-control" name="idle_timer" placeholder="60000">
+      </div>
+
+      <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+
+  </body>
+
+  <script type="text/javascript" src="hp_assets/js/jquery.min.js"></script>
+  <script type="text/javascript">
+    $("#config_form").submit(function(event) {
+      event.preventDefault();
+
+      var $config_form = $(this), url = $config_form.attr('action');
+
+      var request = $.post(url, $("#config_form").serialize());
+      request.done(function(data) {
+        alert('Successfully changed config file.');
+        window.location = ".";
+      });
+    });
+  </script>
+</html>
