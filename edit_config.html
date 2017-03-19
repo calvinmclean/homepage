@@ -28,41 +28,49 @@
       <div class="form-group">
         <label for="title">Homepage title</label>
         <input type="text" class="form-control" name="title" placeholder="Homepage title">
+        <p class="help-block">Change the title that will appear on the homepage.</p>
       </div>
 
       <div class="form-group">
         <label for="unlock_pattern">Unlock pattern</label>
         <input type="text" class="form-control" name="unlock_pattern" placeholder="space">
+        <p class="help-block">Choose an unlock pattern from <a href="https://craig.is/killing/mice">Mousetrap</a>.</p>
       </div>
 
       <div class="form-group">
         <label for="clock_format">Clock format</label>
         <input type="text" class="form-control" name="clock_format" placeholder="H:i j/n/Y">
+        <p class="help-block">Choose a clock format from <a href="http://php.net/manual/en/function.date.php">PHP's date function</a>.</p>
       </div>
 
       <div class="form-group">
         <label for="custom_url">Custom URL</label>
         <input type="url" class="form-control" name="custom_url" placeholder="">
+        <p class="help-block">Input a custom URL that will return proper JSON.</p>
       </div>
 
       <div class="form-group">
         <label for="custom_url_selector">Custom URL selector</label>
         <input type="text" class="form-control" name="custom_url_selector" placeholder="">
+        <p class="help-block">Input a proper PHP array selector to be used on the JSON received above. For example, if I were to fetch from Github's user API with a 'custom_url' of 'https://api.github.com/users/octocat', the 'custom_url_selector' would simply be "['avatar_url']". [{random}] can be replaced for a random index in an array. </p>
       </div>
 
       <div class="form-group">
         <label for="custom_url_headers">Custom URL headers</label>
         <input type="text" class="form-control" name="custom_url_headers" placeholder="">
+        <p class="help-block">Add any headers that may be needed to complete a cURL request to the aforementioned URL properly.</p>
       </div>
 
       <div class="form-group">
         <label for="unsplash_client_id">Unsplash client ID</label>
-        <input type="text" class="form-control" name="unsplash_client_id" placeholder="">
+        <input type="text" class="form-control" name="unsplash_client_id" placeholder="0000000000000000000000000000000000000000000000000000000000000000">
+        <p class="help-block">Get Unsplash client ID from <a href="https://unsplash.com/developers">Unsplash</a>.</p>
       </div>
 
       <div class="form-group">
         <label for="idle_timer">Idle timer</label>
         <input type="text" class="form-control" name="idle_timer" placeholder="60000">
+        <p class="help-block">Set a number of milliseconds here if you'd like to automatically hide the menu after a certain time of inactivity. Leave this attribute out entirely if you don't want an idle timer.</p>
       </div>
 
       <button type="submit" class="btn btn-default">Submit</button>
