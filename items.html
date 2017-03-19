@@ -517,7 +517,10 @@
   <script type="text/javascript">
 
     function delete_item(alt) {
-      $.post("hp_assets/lib/edit_items.php", "delete=" + alt);
+      var request = $.post("hp_assets/lib/edit_items.php", "delete=" + alt);
+      request.done(function(data) {
+        location.reload();
+      });
     }
 
     $.getJSON("../../config.json", function(data) {
